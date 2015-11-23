@@ -21,6 +21,8 @@
       // Inner gutter via padding
       padding-left:  ceil((@grid-gutter-width / 2));
       padding-right: floor((@grid-gutter-width / 2));
+      direction:rtl;
+      text-align:right;
     }
   }
   .col(1); // kickstart it
@@ -37,7 +39,9 @@
   }
   .col(@index, @list) when (@index > @grid-columns) { // terminal
     @{list} {
-      float: left;
+      float: right;
+      direction:rtl;
+      text-align:right;
     }
   }
   .col(1); // kickstart it
